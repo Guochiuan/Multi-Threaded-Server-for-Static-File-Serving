@@ -187,8 +187,8 @@ void* handleRequest(void*arg)
                    //memset(&buffer,'\0',BUFSIZE);
                 }
               printf("Worker %ld successfully completed \n",worker);
-               free(ctx);
-               free(request);
+//               free(ctx);
+//               free(request);
           }
           free(ctx);
         free(request);

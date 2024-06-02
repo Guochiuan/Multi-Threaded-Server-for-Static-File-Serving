@@ -137,7 +137,8 @@ int main(int argc, char **argv) {
   int i,result;
   for(i=0;i<nthreads;i++)
   {
-      result=pthread_create(&workers[i],NULL,processRequest,&workers[i]);
+      pthread_t *pp = &workers[i];
+      result=pthread_create(&workers[i],NULL,processRequest,pp);
       if(result !=0){perror("Error launching threads\n");break;}
     
   }
@@ -261,6 +262,5 @@ void sendRequest(char *path)
        pthread_mutex_unlock(&mutex);
        pthread_cond_broadcast(&cond);
     gfc_cleanup(&gfr);
-
   }
 
