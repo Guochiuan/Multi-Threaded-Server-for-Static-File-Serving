@@ -1,4 +1,4 @@
-#Multithreaded-Getfile-Server
+# Multithreaded-Getfile-Server
 Project Objective: Designing a Multi-Threaded Server for Static File Serving
 
 In this project, I will architect and implement a robust multi-threaded server. The server’s primary purpose is to serve static files based on the GetFile protocol, which closely resembles a simplified HTTP-like protocol. Here are the key components:
